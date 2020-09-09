@@ -7,7 +7,7 @@ namespace Domain.Entities
 
     public class Account
     {
-        private decimal _balance;
+        public decimal Balance { get; private set; }
         private IState _state;
 
         public Account()
@@ -20,10 +20,10 @@ namespace Domain.Entities
             => Update(() => _state.Freeze());
 
         public Account Deposit(decimal amount)
-            => Update(() => _state.Deposit(() => _balance += amount));
+            => Update(() => _state.Deposit(() => Balance += amount));
 
         public Account Withdraw(decimal amount)
-            => Update(() => _state.Withdraw(() => _balance -= amount));
+            => Update(() => _state.Withdraw(() => Balance -= amount));
 
         private Account Update(Func<IState> onChange)
         {
