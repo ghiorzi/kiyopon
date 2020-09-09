@@ -16,7 +16,7 @@ namespace Domain.States
             => this;
 
         public IState Freeze()
-            => this;
+            => new Frozen();
 
         public IState Withdraw(Action onWithdraw)
             => this;

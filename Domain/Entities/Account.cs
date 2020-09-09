@@ -13,6 +13,9 @@ namespace Domain.Entities
         public Account()
             => Update(() => new Active());
 
+        public Account Activate()
+            => Update(() => _state.Activate());
+
         public Account Close()
             => Update(() => _state.Close());
 
