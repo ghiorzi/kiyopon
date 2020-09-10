@@ -16,7 +16,7 @@ namespace Domain.States
         {
             onDeposit();
 
-            return new Active();
+            return Activate();
         }
 
         public IState Freeze()
@@ -26,7 +26,7 @@ namespace Domain.States
         {
             onWithdraw();
 
-            return new Active();
+            return Activate();
         }
     }
 
