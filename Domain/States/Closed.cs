@@ -9,6 +9,9 @@ namespace Domain.States
         public IState Activate()
             => new Active();
 
+        public bool CanWithdraw(Func<bool> onCanWithdraw)
+            => false;
+
         public IState Close()
             => this;
 

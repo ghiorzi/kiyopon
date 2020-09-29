@@ -1,5 +1,5 @@
 ﻿using static System.Console;
-using Domain.Entities;
+using Domain.Models;
 
 // C# 9 Preview
 
