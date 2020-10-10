@@ -1,35 +1,27 @@
 namespace Domain.Models
 {
 
-    public struct Balance
+    public readonly struct Balance
     {
-        private decimal _value;
+        public readonly decimal Value { get; }
 
         private Balance(decimal balance)
-            => _value = balance;
+            => Value = balance;
 
         public static implicit operator Balance(decimal balance)
             => new Balance(balance);
 
         public static explicit operator decimal(Balance balance)
-            => balance._value;
+            => balance.Value;
 
         public Balance Increase(Amount amount)
-        {
-            _value += (decimal)amount;
-
-            return this;
-        }
+            => new Balance(Value + amount.Value);
 
         public Balance Decrease(Amount amount)
-        {
-            _value -= (decimal) amount;
-
-            return this;
-        }
+            => new Balance(Value - amount.Value);
 
         public bool GreaterOrEqualTo(Amount amount)
-            => amount.LessThanOrEqualTo(_value);
+            => amount.LessThanOrEqualTo(Value);
     }
 
 }

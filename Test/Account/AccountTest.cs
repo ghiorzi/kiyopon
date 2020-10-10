@@ -20,7 +20,8 @@ namespace Test
                 .Deposit(700) // 4000
                 .Close()
                 .Deposit(500) // do nothing
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(4000, balance);
         }
@@ -42,7 +43,8 @@ namespace Test
                 .Withdraw(700) // do nothing
                 .Activate()
                 .Withdraw(800) // 200
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(200, balance);
         }

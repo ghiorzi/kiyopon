@@ -12,7 +12,8 @@ namespace Test
                 new Account()
                 .Deposit(1000)
                 .Deposit(500)
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(1500, balance);
         }

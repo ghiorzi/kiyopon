@@ -15,7 +15,8 @@ namespace Test
                 .Withdraw(500) // 600
                 .Withdraw(250) // 350
                 .Withdraw(250) // 100
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(100, balance);
         }
