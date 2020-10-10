@@ -15,7 +15,8 @@ namespace Test
                 .Freeze()
                 .Withdraw(30) // 370 then turns to activate
                 .Withdraw(170) // 200
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(200, balance);
         }

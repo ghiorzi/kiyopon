@@ -14,7 +14,8 @@ namespace Test
                 .Close()
                 .Withdraw(1000) // do nothing
                 .Withdraw(300) // do nothing
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(50, balance);
         }

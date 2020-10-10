@@ -14,7 +14,8 @@ namespace Test
                 .Freeze()
                 .Deposit(100) // 100 then turns to activate 
                 .Deposit(750) // 850
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(850, balance);
         }

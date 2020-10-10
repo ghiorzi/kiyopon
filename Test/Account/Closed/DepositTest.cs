@@ -15,7 +15,8 @@ namespace Test
                 .Deposit(1000) // do nothing
                 .Deposit(500) // do nothing
                 .Deposit(750) // do nothing
-                .Balance;
+                .Balance
+                .Value;
 
             Assert.Equal(400, balance);
         }

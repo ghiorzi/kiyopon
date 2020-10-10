@@ -17,6 +17,7 @@ decimal balance =
     .Deposit(1000) // do nothing
     .Activate()
     .Deposit(2000) // 3000 
-    .Balance;
+    .Balance
+    .Value;
 
 WriteLine(balance); // 3000

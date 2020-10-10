@@ -10,7 +10,7 @@ namespace Test
         {
             Balance balance = 100;
             
-            balance.Decrease(90);
+            balance = balance.Decrease(90);
 
             Assert.Equal(10, (decimal) balance);
         }

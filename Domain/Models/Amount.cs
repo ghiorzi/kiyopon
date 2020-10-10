@@ -5,6 +5,10 @@ namespace Domain.Models
 
     public readonly struct Amount
     {
+
+        public readonly decimal Value 
+            => _value; 
+
         private readonly decimal _value;
 
         private Amount(decimal amount)
